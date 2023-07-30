@@ -24,6 +24,26 @@ pipeline {
             }
 
         }
+
+
+        stage('Sock') {
+
+            agent {
+                dockerfile {
+                    args '-u root:root -v 
+/var/run/docker.sock:/var/run/docker.sock'
+                }
+            }
+
+            steps {
+
+
+                     sh  ''' echo 'hajsaks' '''
+                
+            }
+
+        }
+
  
     }
     post {
