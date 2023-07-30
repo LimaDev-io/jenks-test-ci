@@ -1,1 +1,1 @@
-FROM microsoft/dotnet:2.2-sdk
+FROM mcr.microsoft.com/dotnet/aspnet:7.0
