@@ -6,7 +6,6 @@ pipeline {
         COMPOSE_PROJECT_NAME = "${env.JOB_NAME}-${env.BUILD_ID}"
     }
     stages {
-      
         stage('Echo') {
 
             agent {
@@ -25,26 +24,6 @@ pipeline {
             }
 
         }
-
-
-        stage('Sock') {
-
-            agent {
-                dockerfile {
-                    args '-u root:root -v 
-/var/run/docker.sock:/var/run/docker.sock'
-                }
-            }
-
-            steps {
-
-
-                     sh  ''' echo 'hajsaks' '''
-                
-            }
-
-        }
-
  
     }
     post {
