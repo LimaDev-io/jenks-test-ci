@@ -37,13 +37,11 @@ pipeline {
             steps {
 
 
-                     sh  ''' echo 'hajsaks' '''
+                    sh  ''' echo 'hajsaks' '''
                 
             }
 
         }
-
- 
     }
     post {
 
@@ -51,7 +49,6 @@ pipeline {
             node('master'){
                 
                 sh  '''
-               
                 '''
             }
         }
