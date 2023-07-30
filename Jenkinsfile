@@ -48,7 +48,7 @@ pipeline {
     post {
 
         always {
-            node('main'){
+            node('master'){
                 
                 sh  '''
                
