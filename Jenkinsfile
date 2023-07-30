@@ -26,30 +26,29 @@ pipeline {
         }
 
 
-//         stage('Sock') {
+        stage('Sock') {
 
-//             agent {
-//                 dockerfile {
-//                     args '-u root:root -v 
-// /var/run/docker.sock:/var/run/docker.sock'
-//                 }
-//             }
+            agent {
+                dockerfile {
+                    args '-u root:root -v /var/run/docker.sock:/var/run/docker.sock'
+                }
+            }
 
-//             steps {
+            steps {
 
 
-//                      sh  ''' echo 'hajsaks' '''
+                     sh  ''' echo 'hajsaks' '''
                 
-//             }
+            }
 
-//         }
+        }
 
  
     }
     post {
 
         always {
-            node('master'){
+            node('main'){
                 
                 sh  '''
                
